@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<h4>Quote</h4>
+<table align = "center">
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>{{name}}</td>
+        <td>{{symbol}}</td>
+        <td>${{price}}/share</td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+{% if history %}
+    <table align = "center">
+        <tr bgcolor="#ADD8E6">
+            <th>STOCKS</th>
+            <th>SHARES</th>
+            <th>PRICE</th>
+            <th>TYPE</th>
+            <th>DATE</th>
+        </tr>
+            {% for row in history %}
+                <tr>
+                    <td>{{row.stock}}</td>
+                    <td>{{row.quantity}}</td>
+                    <td>${{row.unit_price}}</td>
+                    <td>{{row.type}}</td>
+                    <td>{{row.date}}</td>
+                </tr>
+            {% endfor %}
+        <tr bgcolor="#ADD8E6"><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+{% endif %}
+{% endblock %}

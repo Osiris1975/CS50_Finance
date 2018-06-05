@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{type}} Confirmation
+{% endblock %}
+
+{% block main %}
+<h4>{{type}} Confirmation</h4>
+<table align = "center">
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>{{name}}</td>
+        <td>{{symbol}}</td>
+        <td>{{quantity}}</td>
+        <td>${{price}}/share</td>
+        <td>${{total}}</td>
+    </tr>
+</table>
+
+{% endblock %}
